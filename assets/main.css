@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.font-libre-caslon{
+    font-family: "Libre Caslon Text";
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
