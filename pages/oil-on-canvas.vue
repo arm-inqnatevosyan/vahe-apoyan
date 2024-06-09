@@ -17,7 +17,7 @@
                   >
                       <img :src="image.src"  @click="openPopup(index)" alt="Image" class="img-expand" />
                       <div class="pt-[12px] popup-content">
-                          <h3 class="font-libre-caslon text-[14px] text-[#000]">{{ image.title }}</h3>
+                          <h3 class="font-libre-caslon text-[14px] text-[#000]"><NuxtLink to="/contact">{{ image.title }}</NuxtLink></h3>
                           <h3 class="font-libre-caslon text-[14px] text-[#9C9C9C]">{{ image.description }}</h3>
                           <h3 class="font-libre-caslon text-[14px] text-[#9C9C9C]">{{ image.size }}</h3>
                       </div>
