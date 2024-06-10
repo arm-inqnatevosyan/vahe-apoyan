@@ -370,6 +370,7 @@ export default {
 }
 .img-block{
     display: inline-block;
+    transition: all 0.2s linear;
     margin-right: 3.5px;
     margin-left: 3.5px;
     background-color: #fff;
@@ -427,4 +428,3 @@ export default {
   margin-bottom: 10px;
 }
 </style>
-  

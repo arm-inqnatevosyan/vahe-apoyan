@@ -342,6 +342,7 @@ export default {
 }
 .img-block{
     display: inline-block;
+    transition: all 0.2s linear;
     margin-right: 3.5px;
     margin-left: 3.5px;
     background-color: #fff;
@@ -350,22 +351,6 @@ export default {
     padding-right: 10px;
     border-radius: 10px;
 }
-@media (max-width:768px) {
-    #img-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .img-expand{
-        width: 50% !important;
-    }
-    .img-expand:hover{
-        width: 100% !important;
-    }
-    .img-block{
-        width: 100% !important;
-    }
-}
-
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -398,5 +383,24 @@ export default {
   font-size: 16px;
   margin-bottom: 10px;
 }
+@media (max-width:768px) {
+  #img-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .img-expand{
+    width: 50% !important;
+  }
+  .img-expand:hover{
+    //transition: width 0.3s ease;
+    width: 100% !important;
+  }
+  .img-block{
+    width: 100% !important;
+  }
+  .popup-image{
+    object-fit: contain;
+  }
+}
+
 </style>
-  

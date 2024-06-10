@@ -220,7 +220,7 @@ export default {
           size: '120 x 130 cm'
         },
         {
-          src: '/oli-on-canvas/73x102_sevak.webp',
+          src: '/oli-on-canvas/73x1012_sevak.webp',
           width: 15,
           title:'Sevak',
           description: 'Oil on canvas',
@@ -300,6 +300,7 @@ export default {
 }
 .img-block{
     display: inline-block;
+    transition: all 0.2s linear;
     margin-right: 3.5px;
     margin-left: 3.5px;
     background-color: #fff;
@@ -307,21 +308,6 @@ export default {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-}
-@media (max-width:768px) {
-    #img-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .img-expand{
-        width: 50% !important;
-    }
-    .img-expand:hover{
-        width: 100% !important;
-    }
-    .img-block{
-        width: 100% !important;
-    }
 }
 
 .popup-overlay {
@@ -356,5 +342,23 @@ export default {
   font-size: 16px;
   margin-bottom: 10px;
 }
+@media (max-width:768px) {
+  #img-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .img-expand{
+    width: 50% !important;
+    transition: width 0.3s ease;
+  }
+  .img-expand:hover{
+    width: 100% !important;
+  }
+  .popup-image{
+    object-fit: contain;
+  }
+  .img-block{
+    width: 100% !important;
+  }
+}
 </style>
-  
