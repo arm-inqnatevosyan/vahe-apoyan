@@ -32,10 +32,7 @@ export default defineNuxtConfig({
       NUXT_GHOST_KEY: process.env.NUXT_GHOST_KEY
     }
   },
-<<<<<<< HEAD
   colorMode:{
 	  preference: 'light'
   }
-=======
->>>>>>> 609b72470c9136e654d4ccbc13971056d6c03dbb
 })
