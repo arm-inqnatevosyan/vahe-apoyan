@@ -66,6 +66,7 @@ export default {
     NavBar: () => import('~/components/NavBar.vue'),
   },
   setup() {
+    const config = useRuntimeConfig();
     const route = useRoute();
 
     const content = ref([]);
@@ -85,7 +86,7 @@ export default {
     // Define your getAllPosts function here
     async function getAllPosts(index) {
       try {
-        const url = `http://localhost:2368/ghost/api/content/posts?key=0d5b28aea711d972d24a2bf52d&limit=4&page=${index}`;
+        const url = `${config.public.NUXT_GHOST_URL}ghost/api/content/posts?key=${config.public.NUXT_GHOST_KEY}&limit=4&page=${index}`;
         console.log('Fetching data from:', url);
         const response = await fetch(url, {
           headers: {
@@ -136,4 +137,3 @@ export default {
 /* Add your scoped styles here */
 </style>
 
-  
