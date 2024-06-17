@@ -70,10 +70,11 @@ const phone = ref('');
 const message = ref('');
 const validation = ref({});
 const success = ref('');
+const config = useRuntimeConfig();
 
 const subscribe = async () => {
   validation.value = {}
-  const {data, error} = await useFetch('http://127.0.0.1:8000/api/send-message', {
+  const {data, error} = await useFetch(`${config.public.NUXT_BASE_URL}/send-message`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
